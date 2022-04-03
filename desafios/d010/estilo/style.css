@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Fonte importada do google, voê pega o css do site*/
+
+@font-face {
+    font-family: 'Android';
+    /*Você cria o nome fonte importada*/
+    src: url('../fontes/idroid.otf') format('opentype');
+    /*Coloquei o local do arquivo da fonte. o ".." antes do "/fontes" você coloca para que ele volte uma pasta para abrir as outras*/
+    font-weight: normal;
+}
+
+:root{
+    --cor0:#ebe5c5;
+    --cor1: #83elad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5:#063d1e; 
+    /* aqui é um comentário, esse root é como se fosse a declaração de variáveis que recebem o valor da cor*/
+
+    --fonte-padrao: Arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', times;
+    --fonte-android: 'Android';
+    /* declaração das variáveis de fonte*/
+}
+
+*{
+  margin: 0px;   
+  padding: 0px;
+  /*seltor global, seleciona todas os elementos para que você edite eles*/
+}
+
+a.externo::after{
+    content: '\00A0\1F517';
+}
+
+body{
+    background-color:var(--cor0);
+    font-size: var(--fonte-padrao);
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    /*Tamanho minio para a sessão*/
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1{
+    color:white;
+    font-family: var(--fonte-destaque);
+    /*padding-bottom: 20px;*/
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.481);
+    /*text shadow é diferente de box-shadow*/
+}
+
+header > p{
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 600px;
+    padding-right:10px ;
+    padding-left:10px ;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.481);
+}
+
+nav{
+    background-color:var(--cor5) ;
+    padding: 10px;
+    box-shadow: 0px 7px 9px rgba(0, 0, 0, 0.366);
+}
+
+nav > a{
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    /*colocando arredondamento nas bordas*/
+    transition-duration: .5s;
+    /*Transição com tempo*/
+}
+
+nav > a:hover{
+    background-color: var(--cor2);
+    color: var(--cor4);
+}
+
+main{
+    min-width: 300px;
+    /*A largura minima do meu main será de 300px, não vai passar disso*/
+    max-width: 1000px;
+    /*A largura maxima do meu main será de 1000px, não vai passar disso*/
+    margin: auto;
+    /*estrutura do main centralizada, tanto textos, quanto imagens, a caixa main centralizada*/
+    background-color: white;
+    /*text-align: justify;*/
+    /* alinhamento do texto*/
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main h1{
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+}
+
+main h2{
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, var(--cor2), transparent);
+
+}
+
+main p{
+    margin: 15px 0px 15px 0;
+    /*serve para dar uma separada nos parágrafos*/
+    text-align: justify;
+    text-indent: 30px;
+    /*espaçamento de início de parágrafo*/
+    font-size: 1em;
+    /*tamanho da fonte*/
+    line-height: 2em;
+    /*espaçamento entre linhas*/
+}
+
+main strong{
+    color: var(--cor3);
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor2);
+    padding: 2px 6px;
+}
+
+main a:hover{
+    text-decoration: underline ;
+    color: var(--cor3);
+}
+
+main img{
+    width: 100%;
+    /*que minahs imagens vão aparecer sempre completas 100%*/
+}
+
+main img.pequena{
+    max-width: 350px;
+    display: block;
+    /*com o display block que eu não sei oque faz ele centraliza*/
+    margin: auto;
+    /*o margin auto não centraliza*/
+}
+
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20;
+    padding: 20px;
+
+}
+
+aside{
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px black;
+}
+
+aside h3{
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0 -10px;
+    border-radius: 10px 10px 0px 0px ;
+}
+
+aside ul{
+    list-style-type: '\2714';
+    /*Estou colocando um simbolo no lugar da bolinha, esse código eu peguei na internet não é compatível com todo tipo de navrgador*/
+    list-style-position: inside;
+    /*isso ele faz com que as bolinhas fiquem para dentro*/
+    columns: 2;
+    /*quantidade de colunas*/
+}
+
+footer{
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer > p > a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: red;
+}
