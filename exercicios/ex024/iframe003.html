@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso do Iframe</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        iframe{
+            width: 95vw;
+            height: 500px;
+            border: 2p solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça uma escolha!</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores obcaecati consectetur hic maxime fugit error qui deserunt praesentium cumque, fuga quisquam iste facilis fugiat eaque mollitia minus, dolores officiis sed.
+    </p>
+    <!-- Criando uma lista-->
+
+    <ul>
+        <li><a href="paginas_extras/pag001.html" target="frame"> Primeira página </a></li>
+        <li><a href="paginas_extras/pag002.html" target="frame"> Segunda página </a></li>
+        <li><a href="#"> Terceira página </a></li>
+    </ul>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus explicabo nobis iste culpa nulla sed quia, nam enim non ipsum amet totam dolor eveniet. Maxime incidunt nulla nisi dolorem dicta.lore Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex est incidunt ipsa accusantium dolorem maiores esse iusto id tempora accusamus veniam repellat recusandae tempore consequatur aliquam culpa, nesciunt libero quidem.
+    </p>
+    <iframe id="tela" name="frame" src="">
+        <p>Infelizmente seu pc não é compatível </p>
+    </iframe>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, alias. Fuga quaerat optio autem iusto sequi vel dolor in, explicabo deleniti accusamus inventore eos rerum! Voluptates unde quia velit hic.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id alias dolore libero nemo incidunt quos deleniti! Officiis dolorum in ipsa, alias at quos provident illum odit molestiae quisquam libero a!
+    </p>
+
+    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1>" >
+        <p>Infelizmente seu pc não é compatível </p>
+    </iframe>
+</body>
+</html>
